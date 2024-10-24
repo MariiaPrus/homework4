@@ -5,5 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <script>
+      // task 1
+      const name = prompt("user name?");
+      const message = `Hello, ${name} How are you?`;
+      alert(message);
+
+      //   task 2
+      const numData = prompt("Введіть тризначне число");
+      const numArray = numData.split("");
+      console.log(numArray);
+      if (numArray[0] == numArray[1] && numArray[1] == numArray[2]) {
+        alert("всі цифри однакові");
+      } else if (
+        numArray[0] == numArray[1] ||
+        numArray[0] == numArray[2] ||
+        numArray[1] == numArray[2]
+      ) {
+        alert("Серед цифр є дві однакові");
+      }
+      //task 3
+      const age = prompt("Вкажіть рік народження?");
+      if (age === null) {
+        alert("Шкода, що Ви не захотіли ввести свій рік народження ");
+      } else {
+        const age1 = 2024 - age;
+        alert(`Тобі ${age1} років`);
+      }
+      const sity = prompt("В якому місті ти проживаєш?");
+      if (sity === null) {
+        alert("Шкода, що Ви не захотіли ввести своє місто ");
+      } else if (sity.toUpperCase() == "КИЇВ") {
+        alert("Ти живеш в столиці України");
+      } else if (sity.toUpperCase() == "ЛОНДОН") {
+        alert("Ти живеш в столиці Великої Британії");
+      } else if (sity.toUpperCase() == "ВАШИНГТОН") {
+        alert("Ти живеш в столиці США");
+      } else {
+        alert(`Ти живеш в місті ${sity}`);
+      }
+      const sport = prompt("Твій улюблений вид спорту?");
+      switch (sport.toUpperCase()) {
+        case null:
+          alert("Шкода, що Ви не захотіли ввести свій улюблений вид спорту");
+        case "ФУТБОЛ":
+          alert(`Ти хочеш стати як Андрій Шевченко?`);
+          break;
+        case "БОКС":
+          alert(`Ти хочеш стати як Олександер Усик?`);
+          break;
+        case "ПЛАВАННЯ":
+          alert(`Ти хочеш стати як Яна Клочкова?`);
+          break;
+        default:
+          alert(`Ти займаєшся ${sport}`);
+      }
+
+      //task 4
+      let numOrStr = prompt("input number or string");
+      console.log(numOrStr);
+
+      switch (true) {
+        case numOrStr === null:
+          console.log("ви скасували");
+          break;
+        case numOrStr.trim() === "":
+          console.log("Empty String");
+          break;
+        case isNaN(+numOrStr):
+          console.log("number is Ba_NaN");
+          break;
+        default:
+          console.log("OK!");
+      }
+    </script>
+  </body>
 </html>
